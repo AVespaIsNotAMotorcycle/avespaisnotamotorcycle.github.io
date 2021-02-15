@@ -4798,3 +4798,7 @@ input[type="button"].btn--primary:focus {
     height: 156px;
     visibility: visible;
 }
+
+.portfolio-button:hover {
+    color: orange;
+}
