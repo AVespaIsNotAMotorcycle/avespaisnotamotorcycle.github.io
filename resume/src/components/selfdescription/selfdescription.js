@@ -11,22 +11,23 @@ const SelfDescription = () => {
         justifyContent: 'space-between',
         backgroundColor: 'white'
       }}>
-        <View style={{flex:1, alignItems:'center', justifyContent:'center'}}>
-            <Image
-            style={{width: 150, height: 150, borderRadius: 150/ 2, justifyContent:'center', alignItems:'center'}}
-            source={{
-                uri: '../../../../public/images/headshot.PNG'
-              }} 
+        <div class='selfsummary-padder' />
+        <div class='headshot-container'>
+            <img 
+              class='headshot'
+              src='https://raw.githubusercontent.com/AVespaIsNotAMotorcycle/avespaisnotamotorcycle.github.io/main/resume/public/images/headshot.PNG' 
             />
-        </View>
-        <View style={{flex:1, alignItems:'center', justifyContent:'center'}}>
-            <h1>Samuel Ebersole</h1>
-        </View>
-        <View style={{flex: 2, alignItems:'center'}}><p>
-            I'm a junior in the Daedalus Honors Scholar Program at Hunter College, and am currently pursuing a double major in Computer Science and History. 
-            I currently volunteer with both Microsoft's TEALS program and PortSide NewYork. 
-            In the past I have worked for the Brooklyn Kindergarten Society, interned at the New-York Historical Society, and volunteered with the Appalachian Mountain Club.
-        </p></View>
+        </div>
+        <div class="nametag-container">
+            <h1 class="nametag">Samuel Ebersole</h1>
+        </div>
+        <div class="selfsummary-container">
+          <p class="selfsummary-p">
+              I'm a junior in the Daedalus Honors Scholar Program at Hunter College, and am currently pursuing a double major in Computer Science and History. 
+              I currently volunteer with both Microsoft's TEALS program and PortSide NewYork. 
+              In the past I have worked for the Brooklyn Kindergarten Society, interned at the New-York Historical Society, and volunteered with the Appalachian Mountain Club.
+          </p>
+        </div>
       </View>
     );
   };
