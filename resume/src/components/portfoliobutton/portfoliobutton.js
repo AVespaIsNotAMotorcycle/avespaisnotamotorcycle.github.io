@@ -4,19 +4,19 @@ import Popup from '../../components/popup/popup'
 
 class PortfolioButton extends React.Component {
 
-    constructor(props)  {
-        super(props);
-        this.state = { showPopup: false };
-    }
+    //constructor(props)  {
+    //    super(props);
+    //    this.state = { showPopup: false };
+    //}
       
-    togglePopup() {
-        this.setState({
-            showPopup: !this.state.showPopup
-        });
-    }
+    //togglePopup() {
+    //    this.setState({
+    //        showPopup: !this.state.showPopup
+    //    });
+    //}
 
     changeBackground(e) {
-        e.target.style.backgroundColor = 'gray';
+        e.target.style.backgroundColor = 'lightgray';
     }
 
     restoreBackground(e) {
@@ -27,7 +27,7 @@ class PortfolioButton extends React.Component {
 
         return (
             <View 
-            onClick={this.togglePopup.bind(this)}
+            onClick={this.props.togglePopup.bind(this)}
             onMouseOver={this.changeBackground}
             onMouseLeave={this.restoreBackground}
             class="portfolio-button"
@@ -36,22 +36,16 @@ class PortfolioButton extends React.Component {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 backgroundColor: 'white',
-                alignItems: 'center'
+                alignItems: 'center',
+                zIndex: 1
               }}>
                 
                 <Image
-                    style={{width: 200, height: 200, borderRadius: 200/ 2}}
+                    style={{width: 200, height: 200, resizeMode: 'contain'}}
                     source={{
                         uri: this.props.imageuri
                     }} 
                 />
-                {this.state.showPopup ?
-                    <Popup
-                    text='Click "Close Button" to hide popup'
-                    closePopup={this.togglePopup.bind(this)}
-                    />
-                    : null
-                }
             </View>
         );
     }
